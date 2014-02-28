@@ -42,7 +42,28 @@ module.exports = (function (tasks) {
                 options : {
                     '-W030' : true
                 },
-                all : ['**/*.js', '!node_modules/**/*.js']
+                server : ['app/**/*.js', 'index.js'],
+                client : ['assets/scripts/src/**/*.js']
+            },
+
+            // @module browserify
+            browserify : {
+                main : {
+                    src : 'assets/scripts/src/app.js',
+                    dest : 'pub/scripts/app.js'
+                }
+            },
+
+            // @module uglify
+            uglify : {
+                options : {
+
+                },
+                app : {
+                    files : {
+                        'pub/scripts/app.min.js' : 'pub/scripts/app.js'
+                    }
+                }
             },
 
             // @module watch
@@ -57,8 +78,12 @@ module.exports = (function (tasks) {
                     tasks : ['less:development', 'cssmin']
                 },
                 scripts : {
-                    files : ['*.js'],
-                    tasks : ['jshint']
+                    files : ['assets/scripts/**/*.js'],
+                    tasks : ['compile-scripts']
+                },
+                server : {
+                    files : ['app/**/*.js', 'index.js', 'package.json'],
+                    tasks : ['server-checks']
                 },
                 livereloadtrigger : {
                     files : ['pub/**/*.html'],
@@ -70,6 +95,10 @@ module.exports = (function (tasks) {
 
         // load preloaded tasks
         _.each(tasks, grunt.loadNpmTasks);
+
+        grunt.registerTask('compile-scripts', ['jshint:client', 'browserify', 'uglify']);
+        grunt.registerTask('compile-styles', ['less:development', 'cssmin']);
+        grunt.registerTask('server-checks', ['jshint:server']);
     };
 
 })([
@@ -77,5 +106,7 @@ module.exports = (function (tasks) {
     'grunt-contrib-watch',
     'grunt-contrib-less',
     'grunt-contrib-cssmin',
-    'grunt-contrib-jshint'
+    'grunt-contrib-jshint',
+    'grunt-contrib-uglify',
+    'grunt-browserify'
 ]);
