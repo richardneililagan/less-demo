@@ -1,0 +1,23 @@
+{
+  "name": "less-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "less": "~1.7.0",
+    "express": "~3.4.8",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "grunt-contrib-jshint": "~0.8.0"
+  }
+}
