@@ -801,4 +801,5 @@
 // will help somebody learn at least some part of it.
 },{}],2:[function(require,module,exports){
 require('../lib/impress.js');
+impress().init();
 },{"../lib/impress.js":1}]},{},[2])

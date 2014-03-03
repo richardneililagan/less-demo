@@ -1,5 +1,133 @@
-@color : #ababab;
+@import '../lib/normalize';
 
-div {
-    background : @color;
+@import 'palette';
+@import 'typography';
+
+html, body {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+
+    background:url(http://subtlepatterns.com/patterns/fresh_snow.png);
+    color: @color-base-type;
+}
+
+/**
+ *  To everyone forking / using this stylesheet as a base / reference:
+ *  -----------
+ *
+ *  This stylesheet uses and depends on ID selectors quite heavily.
+ *  While it's not a requirement to do this when using impress.js,
+ *  it can't be denied that it does help speed development up a bit.
+ *
+ *  That being said,
+ *  it's generally frowned upon to depend on ID selectors in any stylesheet
+ *  even with the best of reasons.
+ *  Using ID selectors messes up the whole balance of specificity in your
+ *  stylesheets, and that's generally a bad thing.
+ *
+ *  Favor positional selectors, class selectors, attribute selectors.
+ *  Make good use of your pseudo selectors and pseudo elements.
+ *  Learn to use a semantic stylesheet to account for your semantic HTML.
+ *
+ */
+
+#impress {
+
+    .font-source-sans(32pt);
+
+    .step {
+        width : 80vw;
+        opacity: .2;
+
+        box-sizing: border-box;
+
+        position: relative;
+
+        -webkit-transition: opacity 1s linear;
+        transition: opacity 1s linear;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    // slide 1
+    #titlepage {
+        text-align:center;
+        h1 {
+            margin:0;
+            .font-source-code(15vh);
+
+            span {
+                display:block;
+                height:15vh;
+                margin:0;
+                padding:0;
+                text-transform:uppercase;
+
+                &:first-child {
+                    color: @color-highlight;
+                }
+            }
+        }
+    }
+
+    // slide 2
+    #subtitlepage {
+        p {
+            font-size: 6vh;
+            margin: 0;
+            height: 100%;
+            display:block;
+            color: @color-highlight;
+
+            &:nth-child(2) {
+                position:relative;
+                left: -1vh;
+                color: @color-base-type;
+                .font-roboto-slab(15vh, 600);
+            }
+        }
+    }
+
+    // slide 3
+    #lessandsass {
+        p {
+            margin: 0;
+            height: 100%;
+            display:block;
+            position:relative;
+            left: -1vh;
+            color: @color-base-type;
+            .font-roboto-slab(15vh, 600);
+
+        }
+    }
+
+    // slide 4
+    #author {
+
+        padding-left: .7vw;
+        border-left: .5vw solid lighten(@color-highlight, 40%);
+
+        h3 {
+            .font-source-sans(1.2em, 300);
+        }
+        p {
+            .font-roboto-slab(.7em);
+            padding-right: 60%;
+
+            em {
+                display:inline-block;
+                color: @color-highlight;
+            }
+        }
+    }
+
+    // slide 5
+    #theneed {
+        text-align:center;
+    }
 }
