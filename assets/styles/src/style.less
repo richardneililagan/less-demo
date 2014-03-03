@@ -10,7 +10,6 @@ html, body {
     margin:0;
 
     background:url(http://subtlepatterns.com/patterns/fresh_snow.png);
-    color: @color-base-type;
 }
 
 /**
@@ -39,7 +38,7 @@ html, body {
 
     .step {
         width : 80vw;
-        opacity: .15;
+        opacity: .2;
 
         box-sizing: border-box;
 
@@ -47,9 +46,11 @@ html, body {
 
         -webkit-transition: opacity .7s linear;
         transition: opacity .7s linear;
+        color : @color-highlight;
 
         &.active {
             opacity: 1;
+            color: @color-base-type;
         }
     }
 
@@ -181,6 +182,45 @@ html, body {
     #summary {
         h4 {
             font-size:1.5em;
+        }
+    }
+
+    // slide 17
+    #demo {
+        text-align: center;
+    }
+
+    // slide 18
+    #wrapup {
+        padding-left: 10vw;
+        font-size:1.9em;
+
+        -webkit-transition: padding-left 30s linear;
+        transition: padding-left 15s ease;
+
+        &.active {
+            padding-left: 0;
+        }
+    }
+
+    // slide 19
+    #overview {
+        text-align:center;
+    }
+
+    // slide 20
+    #final {
+        a:link {
+            margin:0 auto;
+            font-size:1.6em;
+            padding: .2em .4em;
+            display:inline-block;
+            text-decoration:none;
+            color: @color-link;
+
+            border: 1px solid @color-link;
+            border-radius: .2em;
+            background: lighten(@color-link, 40%);
         }
     }
 }

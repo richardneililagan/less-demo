@@ -362,7 +362,6 @@ body {
   padding: 0;
   margin: 0;
   background: url(http://subtlepatterns.com/patterns/fresh_snow.png);
-  color: #262640;
 }
 /**
  *  To everyone forking / using this stylesheet as a base / reference:
@@ -388,14 +387,16 @@ body {
 }
 #impress .step {
   width: 80vw;
-  opacity: .15;
+  opacity: .2;
   box-sizing: border-box;
   position: relative;
   -webkit-transition: opacity .7s linear;
   transition: opacity .7s linear;
+  color: #676767;
 }
 #impress .step.active {
   opacity: 1;
+  color: #406060;
 }
 #impress #titlepage {
   text-align: center;
@@ -424,7 +425,7 @@ body {
 #impress #subtitlepage p:nth-child(2) {
   position: relative;
   left: -1vh;
-  color: #262640;
+  color: #406060;
   font: 600 15vh 'Roboto Slab', sans-serif;
 }
 #impress #lessandsass p {
@@ -433,7 +434,7 @@ body {
   display: block;
   position: relative;
   left: -1vh;
-  color: #262640;
+  color: #406060;
   font: 600 15vh 'Roboto Slab', sans-serif;
 }
 #impress #author {
@@ -494,4 +495,30 @@ body {
 }
 #impress #summary h4 {
   font-size: 1.5em;
+}
+#impress #demo {
+  text-align: center;
+}
+#impress #wrapup {
+  padding-left: 10vw;
+  font-size: 1.9em;
+  -webkit-transition: padding-left 30s linear;
+  transition: padding-left 15s ease;
+}
+#impress #wrapup.active {
+  padding-left: 0;
+}
+#impress #overview {
+  text-align: center;
+}
+#impress #final a:link {
+  margin: 0 auto;
+  font-size: 1.6em;
+  padding: .2em .4em;
+  display: inline-block;
+  text-decoration: none;
+  color: #a56060;
+  border: 1px solid #a56060;
+  border-radius: .2em;
+  background: #efe2e2;
 }
