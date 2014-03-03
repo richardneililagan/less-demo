@@ -39,8 +39,104 @@
             <p>Technical Lead, <em>TC+ Microsoft Professions</em></p>
         </div>
 
-        <div id="theneed" class="step" data-x="0" data-y="5000" data-z="1000" data-scale="3" data-rotate="0">
+        <div id="twopoints" class="step" data-x="0" data-y="5000" data-z="3000" data-scale="4">
+            <p>Just two points:</p>
+        </div>
+
+        <div id="theneed" class="step" data-x="0" data-y="5000" data-z="1000" data-scale="3">
             <p>We always need better and better ways of managing our work.</p>
+        </div>
+
+        <div id="jstools" class="step" data-x="0" data-y="6000" data-z="1000" data-scale="2" data-rotate="90">
+            <h4>Javascript</h4>
+            <ul>
+                <li>Coffeescript</li>
+                <li>Common JS Modules</li>
+                <li>Uglify</li>
+                <li>Concat</li>
+                <li>Browserify</li>
+                <li>Code Closure Compiler</li>
+            </ul>
+        </div>
+
+        <div id="htmltools" class="step" data-x="0" data-y="6000" data-z="1000" data-scale="2" data-rotate="90" data-rotate-x="180">
+            <h4>HTML</h4>
+            <ul>
+                <li>Handlebars</li>
+                <li>Jade</li>
+                <li>Razor</li>
+                <li>DustJS</li>
+                <li>Underscore templates</li>
+                <li>EJS</li>
+            </ul>
+        </div>
+
+        <div id="rationale" class="step" data-x="0" data-y="7000" data-z="1000" data-scale="3" data-rotate-x="180">
+            <p>So why shouldn't we do the same for our CSS?</p>
+        </div>
+
+        <div id="csssucks" class="step" data-x="5500" data-y="0" data-z="1000" data-scale="3" data-rotate="180">
+            <p>CSS sucks.</p>
+        </div>
+
+        <div id="actuallyno" class="step" data-x="5500" data-y="0" data-z="1000" data-scale="3" data-rotate="180" data-rotate-x="90">
+            <p>Nah, not really.</p>
+            <blockquote>You're just using it wrong.</blockquote>
+            <em>- Nicole Sullivan, 2010</em>
+        </div>
+
+        <div id="summary" class="step" data-x="-4000" data-y="0" data-z="0" data-scale="2">
+            <h4>What LESS and SASS do</h4>
+            <p>LESS and SASS are preprocessors.</p>
+            <p>As preprocessors, they can extend the CSS language, adding very useful features to an otherwise very static language.</p>
+        </div>
+
+        <div id="example" class="step" data-x="-4500" data-y="700" data-z="0" data-scale="2" data-rotate="-90">
+<pre>
+// LESS
+
+@color-base-font : #343434;
+
+div {
+  background :
+    lighten(@color-base-font, 50%)
+    ;
+
+  p {
+    color : @color-base-font;
+  }
+}
+</pre>
+        </div>
+
+        <div id="example-compiled" class="step" data-x="-6000" data-y="700" data-z="0" data-scale="2" data-rotate="-90">
+<pre>
+// CSS
+
+div {
+  background : #b3b3b3;
+}
+
+div p {
+  color : #343434;
+}
+
+</pre>
+        </div>
+
+        <div id="variables" class="step" data-x="-6000" data-y="1700" data-z="500" data-scale="3">
+            <h2>Variables</h2>
+            <pre>@some-variable : some-value;</pre>
+        </div>
+
+        <div id="operations" class="step" data-x="-5000" data-y="4500" data-z="500" data-scale="3" data-rotate="90">
+            <h2>... and operations.</h2>
+<pre>@nice-blue : #5B83AD;
+#header { color : @nice-blue + #111; }
+
+-> #header { color : #6c94be; }
+
+</pre>
         </div>
 
         <div id="overview" class="step" data-x="0" data-y="0" data-z="10000">

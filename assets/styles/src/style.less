@@ -39,14 +39,14 @@ html, body {
 
     .step {
         width : 80vw;
-        opacity: .2;
+        opacity: .15;
 
         box-sizing: border-box;
 
         position: relative;
 
-        -webkit-transition: opacity 1s linear;
-        transition: opacity 1s linear;
+        -webkit-transition: opacity .7s linear;
+        transition: opacity .7s linear;
 
         &.active {
             opacity: 1;
@@ -127,7 +127,60 @@ html, body {
     }
 
     // slide 5
-    #theneed {
+    #twopoints {
         text-align:center;
+        .font-oswald(12vh);
+    }
+
+    // slide 6
+    #theneed,
+    #rationale {
+        text-align:center;
+    }
+
+    // slide 7
+    #htmltools,
+    #jstools {
+        padding-left: 15vw;
+        ul {
+            margin:0;
+            padding:0;
+            list-style: none;
+            li {
+                margin:0;
+                padding:0;
+            }
+        }
+    }
+
+    // slide 10
+    #csssucks {
+        text-align:center;
+        .font-oswald(15vh);
+    }
+
+    // slide 11
+    #actuallyno {
+        text-align:center;
+        .font-roboto-slab(8vh);
+
+        blockquote {
+            .font-source-sans(6vh);
+        }
+
+        em {
+            display: block;
+            height:4vh;
+            padding-left:12vw;
+            color: @color-highlight;
+            .font-source-sans(4.5vh);
+        }
+    }
+
+    // slide 12
+    #summary {
+        h4 {
+            font-size:1.5em;
+        }
     }
 }
