@@ -23,11 +23,23 @@ Just browse through the code structure in this repository, no problem!
 A better way to study it though is to actually run this presentation on your machine.
 Check out how everything comes together and works.
 
+
+### Prerequisites
+
 To do that, you'll need the following on your machine:
 
-### git
+1. git
 
 Your machine will need git to be able to efficiently work with this code repository.
 (Plus, git is awesome to try out as part of a developer's toolkit!)
 
 [You can get the latest git version for your machine here](http://git-scm.com).
+
+2. Node
+
+This project uses Node so that you can run it (as a website) on most any computer,
+not just a dedicated server. To be able to run the presentation, you'll need to install
+Node on your machine.
+
+[You can get the latest Node version for your machine here](http://nodejs.org).
+
