@@ -11,8 +11,8 @@ Animation and positioning styles are dynamically provided by the fantastic
 
 Feel free to clone / fork this repository for your own reference / study!
 
-* __LESS CSS__ http://lesscss.org
-* __SASS__ http://sass-lang.com
+* __LESS CSS__ - http://lesscss.org
+* __SASS__ - http://sass-lang.com
 
 
 ## Using this presentation
@@ -28,14 +28,14 @@ Check out how everything comes together and works.
 
 To do that, you'll need the following on your machine:
 
-1. git
+#### git
 
-Your machine will need git to be able to efficiently work with this code repository.
+> Your machine will need git to be able to efficiently work with this code repository.
 (Plus, git is awesome to try out as part of a developer's toolkit!)
 
-[You can get the latest git version for your machine here](http://git-scm.com).
+> [You can get the latest git version for your machine here](http://git-scm.com).
 
-2. Node
+#### Node
 
 This project uses Node so that you can run it (as a website) on most any computer,
 not just a dedicated server. To be able to run the presentation, you'll need to install
