@@ -8,6 +8,6 @@ app.get('/', function (req, res) {
     res.sendfile('./pub/index.html');
 });
 
-app.listen(process.env.PORT || 8080, function () {
+require('http').createServer(app).listen(process.env.PORT || 8080, function () {
     console.log('App listening at port 8080.');
 });
