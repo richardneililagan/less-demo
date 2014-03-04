@@ -3,3 +3,17 @@
 div {
     background : @color;
 }
+
+.clearfix {
+    zoom : 1;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
