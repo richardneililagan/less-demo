@@ -65,14 +65,15 @@ Once that's done, run the following to start the web server:
 You should get a message that says `App listening at port 8080.`.
 This means that the server has been started successfully!
 
-At this point, just point your favorite browser to http://localhost:8080 to run the presentation.
+At this point, just point your favorite browser to [http://localhost:8080](http://127.0.0.1:8080) to run the presentation.
 
 #### Accessing the code behind a corporate proxy
 
 If you're behind a proxy, you might get an error when running `npm install`, as this
 command might initially not be using it.
 
-To fix this, run the following two commands to instruct `npm` to use the proxy of your choice:
+To fix this, run the following two commands to instruct `npm` to use the proxy of your choice
+(__remember to change the proxy URL to your real proxy__) :
 
     npm config --global set proxy http://your.proxy.com:port
     npm config --global set https-proxy http://your.proxy.com:port
