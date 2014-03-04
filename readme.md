@@ -60,7 +60,7 @@ This will install all the prerequisites of the presentation.
 
 Once that's done, run the following to start the web server:
 
-    node index
+    node web
 
 You should get a message that says `App listening at port 8080.`.
 This means that the server has been started successfully!
