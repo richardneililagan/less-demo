@@ -75,7 +75,7 @@ module.exports = (function (tasks) {
                 },
                 styles : {
                     files : ['assets/styles/**/*.less', 'assets/styles/**/*.css'],
-                    tasks : ['less:development', 'cssmin']
+                    tasks : ['compile-styles']
                 },
                 scripts : {
                     files : ['assets/scripts/**/*.js'],
