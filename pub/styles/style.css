@@ -1,3 +1,12 @@
 div {
   background: #ababab;
 }
+div p {
+  font-size: 18em;
+}
+div a {
+  font-family: arial, helvetica, sans-serif;
+}
+div a:link {
+  text-decoartion: none;
+}
